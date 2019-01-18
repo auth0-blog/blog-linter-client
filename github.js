@@ -34,7 +34,8 @@ module.exports = {
   async createRestClient() {
     const token = await this.getInstallationToken();
     const rest = new Rest({
-      accept: 'application/vnd.github.v3+json',
+      accept:
+        'application/vnd.github.v3+json, application/vnd.github.antiope-preview+json',
       'user-agent': 'octokit/rest.js v16.1.0'
     });
 
